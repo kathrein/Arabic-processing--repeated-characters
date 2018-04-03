@@ -28,7 +28,7 @@ rx = re.compile(r'(.)\1{1,}') # check if there is repeated consecutive character
 
 if __name__ == '__main__':
     args = parser.parse_args()
-    with open("/Users/xabuka/Desktop/"+args.input_file, mode = 'r', encoding = 'utf-8')  as text_file: 
+    with open(args.input_file, mode = 'r', encoding = 'utf-8')  as text_file:
         lines = text_file.readlines()
             
     
@@ -55,7 +55,7 @@ if __name__ == '__main__':
                 modified_str = modified_str +' '+ word
     
     
-    fout = open('/Users/xabuka/Desktop/'+args.output_file, 'w', encoding = 'utf-8')
+    fout = open(args.output_file, 'w', encoding = 'utf-8')
     fout.write(modified_str)
           
     #print( modified_str)
